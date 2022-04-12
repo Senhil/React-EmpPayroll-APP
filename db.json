@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "name": "priya KS",
+      "profileArray": [
+        {
+          "url": "../../Assets/profile-images/Ellipse -3.png"
+        },
+        {
+          "url": "../../Assets/profile-images/Ellipse -1.png"
+        },
+        {
+          "url": "../../Assets/profile-images/Ellipse -8.png"
+        },
+        {
+          "url": "../../Assets/profile-images/Ellipse -7.png"
+        }
+      ],
+      "allDepartment": [
+        "HR",
+        "Sales",
+        "Finance",
+        "Engineer",
+        "Others"
+      ],
+      "departMentValue": [
+        "HR"
+      ],
+      "gender": "female",
+      "salary": "350000",
+      "day": "13",
+      "month": "Jan",
+      "year": "2019",
+      "startDate": "",
+      "notes": "good",
+      "id": 1,
+      "profilePic": "../../Assets/profile-images/Ellipse -1.png",
+      "isUpdate": false,
+      "error": {
+        "department": "",
+        "name": "",
+        "gender": "",
+        "salary": "",
+        "profilePic": "",
+        "startDate": ""
+      }
+    },
+    {
+      "name": "Senthil",
+      "profileArray": [
+        {
+          "url": "../../Assets/profile-images/Ellipse -3.png"
+        },
+        {
+          "url": "../../Assets/profile-images/Ellipse -1.png"
+        },
+        {
+          "url": "../../Assets/profile-images/Ellipse -8.png"
+        },
+        {
+          "url": "../../Assets/profile-images/Ellipse -7.png"
+        }
+      ],
+      "allDepartment": [
+        "HR",
+        "Sales",
+        "Finance",
+        "Engineer",
+        "Others"
+      ],
+      "departMentValue": [
+        "Engineer"
+      ],
+      "gender": "male",
+      "salary": "4000000",
+      "day": "12",
+      "month": "Mar",
+      "year": "2021",
+      "startDate": "",
+      "notes": "Good",
+      "id": 2,
+      "profilePic": "../../assets/profile-images/Ellipse -8.png",
+      "isUpdate": false,
+      "error": {
+        "department": "",
+        "name": "",
+        "gender": "",
+        "salary": "",
+        "profilePic": "",
+        "startDate": ""
+      }
+    }
+  ]
+}
