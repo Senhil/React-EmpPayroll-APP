@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "name": "priya KS",
+      "name": "Priya KS",
       "profileArray": [
         {
           "url": "../../Assets/profile-images/Ellipse -3.png"
@@ -34,7 +34,7 @@
       "startDate": "",
       "notes": "good",
       "id": 1,
-      "profilePic": "../../Assets/profile-images/Ellipse -1.png",
+      "profilePic": "../../assets/profile-images/Ellipse -8.png",
       "isUpdate": false,
       "error": {
         "department": "",
@@ -79,7 +79,7 @@
       "startDate": "",
       "notes": "Good",
       "id": 2,
-      "profilePic": "../../assets/profile-images/Ellipse -8.png",
+      "profilePic": "../../assets/profile-images/Ellipse -1.png",
       "isUpdate": false,
       "error": {
         "department": "",
