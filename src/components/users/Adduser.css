@@ -177,7 +177,8 @@ select {
   .submitButton {
     border: none;
     border: 1px solid grey;
-    margin-right: 30px;
+    /* margin-right: 50px; */
+    margin-left: 180px;
   }
   
   .cancelButton {
