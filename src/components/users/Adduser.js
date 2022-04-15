@@ -44,19 +44,18 @@ const AddUser = () => {
   });
 
   
-  const onInputChange =  async event => {
-    setUser({ ...user, [event.target.name]: event.target.value });
-  };
+//   const onInputChange =  async event => {
+//     setUser({ ...user, [event.target.name]: event.target.value });
+//   };
 
   const onSubmit = async event => {
-      console.log(user);
     event.preventDefault();
     await axios.post("http://localhost:3001/users", user);
     history.push("/");
   };
   const changeValue = (event) => {
     setUser({ ...user, [event.target.name]: event.target.value })
-    console.log(event.target.value)
+   
 }
 
 const onCheckChange = (name) => {
@@ -76,56 +75,55 @@ const getChecked = (name) => {
     <div className="payroll-main">
         <header className='header-content header'>
             <div className="logo-content">
-                <img src={logo} alt="" />
-                <div>
-                    <span className="emp-text">EMPLOYEE</span> <br />
-                    <span className="emp-text emp-payroll">PAYROLL</span>
-                </div>
+            <Link to="/" className="resetButton button cancelButton"><img src={logo} alt="" /></Link>
+            <div className="form-head">EMPLOYEE  PAYROLL  FORM</div>
+            
             </div>
         </header>
+        
         <div className="form-content">
             <form className="form-head" action="#" onSubmit={onSubmit}>
-                <div className="form-head">Employee Payroll form</div>
+                
                 <div className="row-content">
-                    <label className="label text" htmlFor="name">Name</label>
-                    <input className="input" type="text" id="name" name="name" value={user.name} onChange={changeValue} placeholder="Your name.." />
-                {/* <error className="error">{user.error.name}</error> */}
+                    <label className="label text" htmlFor="name">NAME : </label>
+                    <input className="input" type="text" id="name" name="name" value={user.name} onChange={changeValue} placeholder="Enter your full name" />
+               
                 </div>
                 <div className="row-content">
-                    <label className="label text" htmlFor="profilePic">Profile image</label>
+                    <label className="label text" htmlFor="profilePic">PROFILE : </label>
                     <div className="profile-radio-content">
-                        <label >
-                            <input type="radio" name="profilePic" checked={user.profilePic === '../../Assets/profile-images/Ellipse -1.png'} value="../../Assets/profile-images/Ellipse -1.png" onChange={changeValue} />
-                            <img className="profile" src={profile2} alt="profile" />
-                        </label>
                         <label >
                             <input type="radio" name="profilePic" checked={user.profilePic === '../../Assets/profile-images/Ellipse -3.png'} value="../../Assets/profile-images/Ellipse -3.png" onChange={changeValue} />
                             <img className="profile" src={profile1} alt="profile" />
                         </label>
                         <label >
-                            <input type="radio" name="profilePic" checked={user.profilePic === '../../Assets/profile-images/Ellipse -7.png'} value="../../Assets/profile-images/Ellipse -7.png" onChange={changeValue} />
-                            <img className="profile" src={profile4} alt="profile" />
+                            <input type="radio" name="profilePic" checked={user.profilePic === '../../Assets/profile-images/Ellipse -1.png'} value="../../Assets/profile-images/Ellipse -1.png" onChange={changeValue} />
+                            <img className="profile" src={profile2} alt="profile" />
                         </label>
                         <label >
                             <input type="radio" name="profilePic" checked={user.profilePic === '../../Assets/profile-images/Ellipse -8.png'} value="../../Assets/profile-images/Ellipse -8.png" onChange={changeValue} />
                             <img className="profile" src={profile3} alt="profile" />
                         </label>
+                        <label >
+                            <input type="radio" name="profilePic" checked={user.profilePic === '../../Assets/profile-images/Ellipse -7.png'} value="../../Assets/profile-images/Ellipse -7.png" onChange={changeValue} />
+                            <img className="profile" src={profile4} alt="profile" />
+                        </label>
 
                     </div>
-                    {/* <error className="error">{user.error.profilePic}</error> */}
+                   
                 </div>
                 <div className="row-content">
-                    <label className="label text" htmlFor="gender">Gender</label>
+                    <label className="label text" htmlFor="gender">GENDER : </label>
                     <div>
-                        <input type="radio" id="male" checked={user.gender === 'male'} onChange={changeValue} name="gender" value="male" />
+                        <input type="radio" id="male" checked={user.gender === 'Male'} onChange={changeValue} name="gender" value="Male" />
                         <label className="text" htmlFor="male">Male</label>
-                        <input type="radio" id="female" checked={user.gender === 'female'} onChange={changeValue} name="gender" value="female" />
+                        <input type="radio" id="female" checked={user.gender === 'Female'} onChange={changeValue} name="gender" value="Female" />
                         <label className="text" htmlFor="female">Female</label>
                     </div>
-                    {/* <error className="error">{user.error.gender}</error> */}
+                    
                 </div>
                 <div className="row-content">
-                    <label className="label text" htmlFor="departments">Department</label>
+                    <label className="label text" htmlFor="departments">DEPARTMENT : </label>
                     <div>
                         {user.allDepartment.map(item => (
                             <span key={item}>
@@ -136,17 +134,17 @@ const getChecked = (name) => {
                         ))}
 
                     </div>
-                    {/* <error className="error">{user.error.department}</error> */}
+                    
                 </div>
 
                 <div className="row-content">
-                    <label className="label text" htmlFor="salary">Salary</label>
+                    <label className="label text" htmlFor="salary">SALARY : </label>
                     <input className="input" type="text" id="salary" name="salary" value={user.salary} onChange={changeValue} />
-                    {/* <error className="error">{user.error.salary}</error> */}
+                    
                 </div>
 
                 <div className="row-content">
-                    <label className="label text" htmlFor="startDate">Start Date</label>
+                    <label className="label text" htmlFor="startDate">JOINING DATE : </label>
                     <div>
                         <select value={user.day} onChange={changeValue} id="day" name="day">
                         <option value="" disabled selected>Day</option>
@@ -199,6 +197,7 @@ const getChecked = (name) => {
                         </select>
                         <select value={user.year} onChange={changeValue} id="year" name="year">
                         <option value="" disabled selected>Year</option>
+                            <option value="2022">2022</option>
                             <option value="2021">2021</option>
                             <option value="2020">2020</option>
                             <option value="2019">2019</option>
@@ -211,19 +210,19 @@ const getChecked = (name) => {
                 </div>
 
                 <div className="row-content">
-                    <label className="label text" htmlFor="notes">Notes</label>
+                    <label className="label text" htmlFor="notes">NOTES : </label>
                     <textarea onChange={changeValue} id="notes" value={user.notes} className="input" name="notes" placeholder=""
-                        style={{ height: '120%' }}></textarea>
-                {/* <error className="error">{user.error.notes}</error> */}
-                </div>
+                        style={{ height: '5%' }}></textarea>
+               
+                </div> 
 
                 <div className="buttonParent">
-                    <Link to="/" className="resetButton button cancelButton">Cancel</Link>
-                    <Link to="/" className="resetButton button cancelButton">Employee List</Link>
+                    <Link to="/" className="resetButton button cancelButton">CANCEL</Link>
+                    <Link to="/" className="resetButton button cancelButton">HOME</Link>
 
                     <div className="submit-reset">
                     
-                        <button type="submit" className="button submitButton" id="submitButton">{user.isUpdate ? 'Update' : 'Submit'}</button>
+                        <button type="submit" className="button submitButton" id="submitButton">{user.isUpdate ? 'Update' : 'SUBMIT'}</button>
                     </div>
                 </div >
             </form >
